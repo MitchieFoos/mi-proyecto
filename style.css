@@ -227,6 +227,45 @@ a:hover {
   transition: 1s;
 }
 
+.carrusel{
+  margin: 3em auto;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+.carrusel::scroll-button(right) {
+   content: '>';
+   border: none;
+   background-color: #8258ff;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   padding-bottom: .1em;
+   cursor: pointer;
+
+}
+
+
+.card {
+  flex: 0 0 20em;
+  height: 12em;
+  background-color: red;
+  padding: 1em;
+  border-radius: .5em;
+  text-align: center;
+  align-content: center;
+
+
+
+}
+
 @media (min-width: 1024px) {
   .logotux {
     width: 5vw;
