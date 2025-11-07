@@ -226,12 +226,16 @@ a:hover {
   color: #8258ff;
   transition: 1s;
 }
-
-
+.gal{
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 3em;
+  padding: 2%;
+}
 .carrusel{
-  margin: 3em auto;
+  margin: 1em ;
   display: flex;
-  gap: 3em;
+  gap: 2em;
   width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -255,7 +259,7 @@ a:hover {
    position: fixed;
    position-anchor: --carrusel;
    position-area: right center;
-   translate: -100%;
+   translate: -120%;
    
 }
 .carrusel::scroll-button(right):disabled, .carrusel::scroll-button(left):disabled {
@@ -265,7 +269,7 @@ a:hover {
 .carrusel::scroll-button(left) {
   content: '<';
   position-area: left center;
-  translate: 100%;
+  translate: 80%;
 
 }
 
@@ -277,13 +281,18 @@ a:hover {
   text-align: center;
   align-content: center;
   scroll-snap-align: start;
+  flex-wrap: nowrap;
 
 
 }
 
 .linuses {
-  width: 20vw;
+  width: 80vw;
   height: auto;
+
+}
+#linuspoto {
+margin-right: 15%;
 }
 
 @media (min-width: 1024px) {
@@ -429,4 +438,61 @@ a:hover {
   footer {
     font-size: 100%;
   }
+.carrusel{
+  margin: 3em auto;
+  display: flex;
+  gap: 3em;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  anchor-name: --carrusel;
+  scroll-snap-type: x mandatory;
+
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+.carrusel::scroll-button(right), .carrusel::scroll-button(left)  {
+   content: '>';
+   border: none;
+   background-color: #8258ff;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   padding-bottom: .1em;
+   cursor: pointer;
+   position: fixed;
+   position-anchor: --carrusel;
+   position-area: right center;
+   translate: -100%;
+   
+}
+.carrusel::scroll-button(right):disabled, .carrusel::scroll-button(left):disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+.carrusel::scroll-button(left) {
+  content: '<';
+  position-area: left center;
+  translate: 100%;
+
+}
+
+.card {
+  flex: 0 0 20em;
+  height: 30vh;
+  padding: 1em;
+  border-radius: .5em;
+  text-align: center;
+  align-content: center;
+  scroll-snap-align: start;
+
+
+}
+
+.linuses {
+  width: 20vw;
+  height: auto;
+}
 }
