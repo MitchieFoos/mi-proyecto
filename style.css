@@ -227,13 +227,16 @@ a:hover {
   transition: 1s;
 }
 
+
 .carrusel{
   margin: 3em auto;
   display: flex;
-  gap: 1em;
+  gap: 3em;
   width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
+  anchor-name: --carrusel;
+  scroll-snap-type: x mandatory;
 
 }
 .carrusel::-webkit-scrollbar {
@@ -249,25 +252,38 @@ a:hover {
    border-radius: 50%;
    padding-bottom: .1em;
    cursor: pointer;
-
+   position: fixed;
+   position-anchor: --carrusel;
+   position-area: right center;
+   translate: -100%;
+   
 }
-
+.carrusel::scroll-button(right):disabled, .carrusel::scroll-button(left):disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
 .carrusel::scroll-button(left) {
-content: '<';
+  content: '<';
+  position-area: left center;
+  translate: 100%;
 
 }
 
 .card {
   flex: 0 0 20em;
-  height: 12em;
-  background-color: red;
+  height: 30vh;
   padding: 1em;
   border-radius: .5em;
   text-align: center;
   align-content: center;
+  scroll-snap-align: start;
 
 
+}
 
+.linuses {
+  width: 20vw;
+  height: auto;
 }
 
 @media (min-width: 1024px) {
