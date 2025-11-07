@@ -295,6 +295,10 @@ a:hover {
 margin-right: 15%;
 }
 
+#linuspoto2 {
+margin-left: 3%;
+
+}
 @media (min-width: 1024px) {
   .logotux {
     width: 5vw;
